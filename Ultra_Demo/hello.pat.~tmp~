@@ -1,0 +1,1880 @@
+#line 1 "hello.pat"
+#line 1 "f:\\current work\\ultra_demo\\Eflash_Toolbox.h"
+
+
+#line 1 "f:\\current work\\ultra_demo\\user_define.h"
+
+
+#line 1 "f:\\current work\\ultra_demo\\Eflash_Toolbox.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 4 "f:\\current work\\ultra_demo\\user_define.h"
+
+
+
+
+
+
+//===========================================================
+//sector erase: over 40000 cycle
+//
+//
+//
+//
+//===========================================================
+
+
+//====================CS TABLE===============================
+//SCRAMBLE(eFlash_sclk, t_cs1)
+//SCRAMBLE(eFlash_sce, t_cs2)
+//SCRAMBLE(eFlash_porstn, t_cs3)
+//SCRAMBLE(pmu_rst, t_cs4)
+//SCRAMBLE(pmu_cs, t_cs5)
+//SCRAMBLE(eFlash_sio_i, t_cs6)
+//SCRAMBLE(eFlash1_smten, t_cs7)
+//SCRAMBLE(eFlash2_smten, t_cs8)
+//===========================================================
+
+//state all for eFlash2 (32 bit)
+
+
+
+
+
+
+
+
+
+
+//state all for eFlash1 (128 bit)
+
+
+
+
+
+
+
+
+
+
+//PS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_send_data
+Usage:spi_send_data(labelname)
+Action:get spi data in dbase and send to device
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+PLZ use it after spi_set_data or spi_input_setup
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//ebm_send_ebmdata//10us
+/***************************************************
+Macro name: serial_test_mode_entry
+Usage:serial_test_mode_entry(labelname)
+Action:make chips enter into serial test mode
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+//stb_set_data(0x2015, 0x0302)
+stb_set_data(0x04A8, 0xC040)
+****************************************************/
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: read_register_32bit
+Usage:read_register_32bit(labelname,addr,Hdat,Ldat)
+Action:used for sending read register command in 32 data bits chips
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+adr:  Plz input address here and in Hex
+Hdat: Plz input MSB of dasta, ensure not to be more than 18 bits
+Ldat: Plz input LSB of data, ensure not to be more than 18 bits
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: read_flash_32bit
+Usage:read_flash_32bit(labelname,addr,Hdat,Ldat)
+Action:used for sending read flash command in 32 data bits chips
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+xadr: Plz input x address here and in Hex
+yadr: Plz input y address here and in Hex
+Hdat: Plz input MSB of data, ensure not to be more than 18 bits
+Ldat: Plz input LSB of data, ensure not to be more than 18 bits
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: program_32bit
+Usage:program_32bit(labelname,addr,Hdat,Ldat)
+Action:used for sending program command in 32 data bits chips
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+addr: Plz input address here and in Hex
+Hdat: Plz input MSB of data, ensure not to be more than 18 bits
+Ldat: Plz input LSB of data, ensure not to be more than 18 bits
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************
+Macro: program_trim_code
+***************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: sector_erase
+Usage:sector_erase(labelname,addr)
+Action:used for sector erase command in 32 data bits chips
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+addr: Plz input  address here and in Hex
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: chip_erase
+Usage:chip_erase(labelname,addr)
+Action:used for chip erase command in 32 data bits chips
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+xadr: Plz input x address here and in Hex
+yadr: Plz input y address here and in Hex
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: exit_test_mode
+Usage:exit_test_mode(labelname)
+Action:make chips exist serial test mode
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: external_chip_erase
+Usage:external_chip_erase(labelname,addr)
+Action:make chips exist serial test mode
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop,  pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 563 "f:\\current work\\ultra_demo\\user_define.h"
+#line 4 "f:\\current work\\ultra_demo\\Eflash_Toolbox.h"
+/*******************Brief Introduction************************/
+//Developer: Colin Liu
+//Log:Version	|	Date		|	Description
+//		V1.0	|	June.9	2017|	Foundational STB module Design
+//		V1.1	|	June.16	2017|	Foundational SPI module Design
+//		V1.2	|	June.30	2017|	Fixed after debug, function Verified
+//		V1.3	|	July.6	2017|	Updated label, loop and link module
+//		V2.0	|	JUly.21 2017|	Improve the tools, abandon the way to send address by ps, 
+//				|				|	and control the data bit with address ALU
+/*************************************************************/
+//Developed Area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//EBM AREA
+/****************************************************************
+Macro name: send_EBM_data
+Usage:send_EBM_data(labelname,state)
+Action:Send the data which is saved in the EBM, and output from the
+designed pin
+Total cycle count:controlled by count12
+Working state:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+labelname:	used create a label for the inside loop
+state:		The statement in which ebm is sended
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>WARNING<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Can not be used in the first three cycle of pattern
+*****************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************
+Macro name: set_counter
+Usage:set_counter(count,num,state)
+Action:Set the content of the count you want
+Total cycle count:1
+Working state: dummy state
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+count: The count you want to modified
+num: the content you want to save in the count
+*****************************************************************/
+
+
+
+
+
+
+//LOOP AND JUMP
+/****************************************************************
+Macro name: loop_start
+Usage:loop_start(loop_name,counter,num_subtract_1)
+Action:make a new loop
+Total cycle count:2
+Working state: dummy_state
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+loop_name: used create a label for the loop
+counter:select the count which is used to control the loop
+num_subtract_1:input the number of loop remember -1
+*****************************************************************/
+
+
+
+
+
+
+
+
+
+
+/****************************************************************
+Macro name: loop_end
+Usage:loop_end(loop_name,counter)
+Action:loop's end, have two action, jump back to the loop label
+or just jump out
+Total cycle count:1
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+loop_name: used create a label for the loop
+counter:select the count which is used to control the loop
+num_subtract_1:input the number of loop£¬ remember -1
+*****************************************************************/
+
+
+
+
+
+
+/****************************************************************
+Macro name: label
+Usage:label(labelname)
+Action:make a new label
+Total cycle count:1
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+labelname: used create a label,for other place jump
+>>>>>>>>>>>>>>>>>>>Improve action<<<<<<<<<<<<<<<<<<<
+programer can use count,mar,datgen,xalu,yalu follow this macro
+,To improve the function of this cycle
+*****************************************************************/
+
+
+
+
+
+/***************************************************
+Macro name: just_jump_to
+Usage:just_jump_to(labelname,condition)
+Action:jump to the label or pattern according to the
+jump condition, affected only by count9
+Total cycle count:1
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+labelname:	which pattern or label you wanna jump
+counter: which counter you are using to control the jump function
+condition:	The condition that this macro can take effect.
+SEE mar instruction
+>>>>>>>>>>>>>>>>>>>Improve action<<<<<<<<<<<<<<<<<<<
+programer can use mar,datgen,xalu,yalu, improve
+the function of this cycle
+****************************************************/
+
+
+
+
+
+
+//BASIC FUNCTION 
+
+/***************************************************
+Macro name: stb_set_all
+Usage:stb_set_all(cmd,addr,dataH,dataL)
+Action:All parameter setup at every begining of stb
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+keyin all parameter in hex
+****************************************************/
+
+
+
+
+
+/***********************************************************
+Macro name: stb_set_command
+Usage:stb_set_command(hexdata)
+Action:save cmd data in dmain register
+Total cycle count:1
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+cmd: please input the cmd in Hex as you want
+************************************************************/
+
+
+
+
+
+
+/***********************************************************
+Macro name: stb_send_command
+Usage:stb_send_command()
+Action:get cmd data in dmain register and output
+Total cycle count:count6+2
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_command or stb_set_all
+label_name: used for incide loop, pay attention not to be repeated
+***********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: stb_set_address
+Usage:stb_send_address(hexdata)
+Action:save address in dmain2
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+xaddr: X address in Hex
+yaddr: Y address in Hex
+***************************************************/
+
+
+
+
+
+
+/***************************************************
+Macro name: stb_set_start_address
+Usage:stb_send__start_address(hexdata)
+Action:save address in dmain2
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+xaddr: X address in Hex
+yaddr: Y address in Hex
+***************************************************/
+
+
+
+
+
+
+/***********************************************************
+Macro name: stb_send_address
+Usage:stb_send_address(labelname)
+Action:get address in dmain2 register and output
+Total cycle count:count7+2
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_address or stb_set_all
+label_name: used for incide loop, pay attention not to be repeated
+***********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: stb_set_data
+Usage:stb_set_data(hexdata)
+Action:save data in dbase register
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+data: please input the data in Hex as you want
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: stb_send_data
+Usage:stb_send_data(labelname)
+Action:get data in dbase register and output all on sio_in
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_data or set_all
+label_name: used for incide loop,  pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************
+Macro name: E1_stb_read_data
+Usage:E1_stb_read_data()
+Action:get data in dbase register and compared with
+Eflash1 output
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_command or set_all
+label_name: used for incide loop, pay attention not to be repeated
+*************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: E2_stb_read_data
+Usage:E2_stb_read_data(label_name)
+Action:get data in dbase register and compared with
+Eflash2 output
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_command or set_all
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************
+Macro name: cycle_delay
+Usage:		cycle_delay(labelname,hex_num, ps)
+Action:		set the cycle number and state of delay
+Total cycle count:count8 + 2
+Limit:      3 -->(2^32 + 1)[cycle range]
+1 -->(2^32 - 1)[input range]
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+label_name: used for incide loop, pay attention not to be repeated
+num_substract_2 : please input [num(delay cycle) - 2] in hex
+state :	please input chip select state which has been defined
+*************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_set_address
+Usage:spi_set_address(address)
+Action:save spi address in dmain
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+keyin all parameter in hex
+****************************************************/
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_set_data
+Usage:spi_set_data(data)
+Action:send spi data in dbase
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+keyin all parameter in hex
+****************************************************/
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_input_setup
+Usage:spi_input_setup(address,data)
+Action:save spi address in dmain and save spi data in
+dbase and initialize the spi transmission protocol
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+keyin all parameter in hex
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_output_setup
+Usage:spi_output_setup(address,data)
+Action:save spi address in dmain and save spi data in
+dbase and initialize the spi transmission protocol
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+keyin all parameter in hex
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_send_address
+Usage:spi_send_address(labelname)
+Action:get spi address in dmain and send to device
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+PLZ use it after spi_input(output)_setup or spi_set_address
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_send_data
+Usage:spi_send_data(labelname)
+Action:get spi data in dbase and send to device
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+PLZ use it after spi_set_data or spi_input_setup
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: spi_read_data
+Usage:spi_read_data(labelname)
+Action:get spi data in dbase and compare with the spi_txd
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+PLZ use it after spi_set_data or spi_input_setup
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************************************
+Macro name: E1_stb_read_data
+Usage:E1_stb_read_data()
+Action:get data in dbase register and compared with
+Eflash1 output
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_command or set_all
+label_name: used for incide loop, pay attention not to be repeated
+*************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************
+Macro name: E2_stb_read_data_AI
+Usage:E2_stb_read_data(label_name)
+Action:get data in dbase register and compared with
+Eflash2 output
+>>>>>>>>>>>>>>>>>>>>>>>>GUIDE<<<<<<<<<<<<<<<<<<<<<<<
+please use it after using stb_set_command or set_all
+label_name: used for incide loop, pay attention not to be repeated
+****************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 647 "f:\\current work\\ultra_demo\\Eflash_Toolbox.h"
+#line 2 "hello.pat"
+
+PATTERN(p_hello)//Actually It's a dialog
+@{
+	count(1, amax()); count(2, 8); count(3, 16); count(4, 14); count(5, 5); count(6, 6); count(7, 22); count(8, 0); count(12, 0); xmain(xmax()); ymain(ymax());
+@}
+
+
+% chips cs1pt,cs2t,cs3f,cs4f,cs5t,cs6f \n pinfunc tset1, PS64 \n DATGEN sudata,dmain,udatadr \n UDATA 0x11 \n
+% pinfunc tset1, PS64 \n chips cs1pt,cs2t,cs3f,cs4f,cs5t,cs6f \n count count12, countudata \n udata 0x17 \n //24 cycle
+% chips cs1pt,cs2t,cs3f,cs4f,cs5t,cs6f \n pinfunc tset1, PS64 \n DATGEN sudata, dbase2,udatadr \n UDATA 0x0 \n % chips cs1pt,cs2t,cs3f,cs4f,cs5t,cs6f \n pinfunc tset1, PS64 \n DATGEN sudata, dbase,udatadr \n UDATA 0x0 \n
+% chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS1 \n DATGEN mainmain \n %diagonal_program_cmd: \n datgen sdmain, dmain, SHLDR, mainmain \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS1 \n count count6, decr, aon \n mar cjmpnz, diagonal_program_cmd \n
+%diagonal_program_EBM: \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n count count12,decr,aon \n pinfunc PS2,EBM_PS1,tset1,ebm_enable,ebm_inc \n mar cjmpnz,diagonal_program_EBM \n
+% chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN basebase \n %diagonal_program1_datal: \n datgen sdbase,dbase,SHLDR,basebase \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program1_datal \n % chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN base2base2 \n %diagonal_program1_datah: \n datgen sdbase2,dbase2,SHLDR,base2base2 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program1_datah \n
+% chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN basebase \n %diagonal_program2_datal: \n datgen sdbase,dbase,SHLDR,basebase \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program2_datal \n % chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN base2base2 \n %diagonal_program2_datah: \n datgen sdbase2,dbase2,SHLDR,base2base2 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program2_datah \n
+% chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN basebase \n %diagonal_program3_datal: \n datgen sdbase,dbase,SHLDR,basebase \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program3_datal \n % chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN base2base2 \n %diagonal_program3_datah: \n datgen sdbase2,dbase2,SHLDR,base2base2 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program3_datah \n
+% chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN basebase \n %diagonal_program4_datal: \n datgen sdbase,dbase,SHLDR,basebase \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program4_datal \n % chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n DATGEN base2base2 \n %diagonal_program4_datah: \n datgen sdbase2,dbase2,SHLDR,base2base2 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n pinfunc tset1, PS3 \n count count4, decr, aon \n mar cjmpnz, diagonal_program4_datah \n
+% pinfunc tset1, PS64 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n count count8, countudata \n udata 0x3E6 \n mar noread \n %diagonal_program_dummy_start: \n pinfunc tset1, PS64 \n chips cs1pt,cs2f,cs3f,cs4f,cs5t \n count count8, decr, aoff \n mar cjmpnz, diagonal_program_dummy_start,noread \n
+
+% mar done
+pinfunc	adhiz
+//********************end*****************

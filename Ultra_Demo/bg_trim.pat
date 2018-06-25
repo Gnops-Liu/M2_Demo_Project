@@ -1,0 +1,14 @@
+#include "pat_macro.h"
+
+PATTERN(p_BG)
+@{
+	amain(0x0);
+	dmain(0x0);
+@}
+//read rom version
+//s 88 00 5a+0x98=8'b1001,1000 ->8'b0011,0000=0x30
+//sr 89 01 01+0x16=8'b0001,0110 ->8'b0110,0000=0x60
+
+Read_2DBit(0x88,0x00,0x5a,0x30, 0x89,0x01,0x01,0x60)
+%mar done
+pinfunc adhiz

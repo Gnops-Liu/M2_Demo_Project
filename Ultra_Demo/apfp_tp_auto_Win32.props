@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding = "utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <patcom>
+      <Mag1>false</Mag1>
+      <Mag2>true</Mag2>
+      <Mag3>true</Mag3>
+      <Mag5>false</Mag5>
+      <Mag6>false</Mag6>
+      <ContinueOnError>True</ContinueOnError>
+      <PatcomOptions> -U -E -P"Debug\tp_auto_Win32.exe" -MA</PatcomOptions>
+      <PatcomOutput></PatcomOutput>
+    </patcom>
+  </ItemDefinitionGroup>
+</Project>

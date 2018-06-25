@@ -1,0 +1,38 @@
+﻿Build started 2018/6/21 16:41:49.
+     1>Project "F:\current work\Ultra_Demo\tp_auto_Win32.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.h" "F:\current work\Ultra_Demo\Debug\"
+         copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.dll" "F:\current work\Ultra_Demo\Debug\"
+         copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.lib" "F:\current work\Ultra_Demo\Debug\"
+         :VCEnd
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\current work\Ultra_Demo\\" /ID:\Drivers\Head_File /ID:\Drivers /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D NO_WARN_MBCS_MFC_DEPRECATION /D _USING_V110_SDK71_ /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /arch:SSE /fp:precise /Zc:wchar_t /Zc:forScope /Fo"F:\current work\Ultra_Demo\Debug\\" /Fd"F:\current work\Ultra_Demo\Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt pin_lists.cpp
+         pin_lists.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\current work\Ultra_Demo\Debug\Ultra_Demo.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"F:\current work\Ultra_Demo\Debug\Ultra_Demo.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\current work\Ultra_Demo\Debug\Ultra_Demo.lib" /MACHINE:X86 "F:\current work\Ultra_Demo\Debug\MultiDialog.res"
+         "F:\current work\Ultra_Demo\Debug\driver.obj"
+         "F:\current work\Ultra_Demo\Debug\fdatalog.obj"
+         "F:\current work\Ultra_Demo\Debug\host_begin.obj"
+         "F:\current work\Ultra_Demo\Debug\pin_assignments.obj"
+         "F:\current work\Ultra_Demo\Debug\pin_lists.obj"
+         "F:\current work\Ultra_Demo\Debug\pin_scramble.obj"
+         "F:\current work\Ultra_Demo\Debug\seq_and_bin.obj"
+         "F:\current work\Ultra_Demo\Debug\site_begin.obj"
+         "F:\current work\Ultra_Demo\Debug\tblks_ac.obj"
+         "F:\current work\Ultra_Demo\Debug\tblks_dc.obj"
+         "F:\current work\Ultra_Demo\Debug\tester.obj"
+         "F:\current work\Ultra_Demo\Debug\test_begin.obj"
+         "F:\current work\Ultra_Demo\Debug\test_end.obj"
+         "F:\current work\Ultra_Demo\Debug\timer.obj"
+         "F:\current work\Ultra_Demo\Debug\timing.obj"
+         "F:\current work\Ultra_Demo\Debug\voltage.obj"
+         Debug\CL_Improve.lib
+         tp_auto_Win32.vcxproj -> F:\current work\Ultra_Demo\Debug\Ultra_Demo.exe
+     1>Done Building Project "F:\current work\Ultra_Demo\tp_auto_Win32.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.23

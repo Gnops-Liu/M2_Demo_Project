@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fdatalog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pin_lists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="protos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="user_define.h">
+      <Filter>Header Files\User</Filter>
+    </ClInclude>
+    <ClInclude Include="Eflash_Toolbox.h">
+      <Filter>Header Files\User</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\CL_Improve.h">
+      <Filter>Header Files\DLL</Filter>
+    </ClInclude>
+    <ClInclude Include="Debug\pat_macro.h">
+      <Filter>Header Files\User</Filter>
+    </ClInclude>
+    <ClInclude Include="COF_ToolBox.h">
+      <Filter>Header Files\DLL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8c64f1c4-fb63-4fa7-9d77-9647fc876862}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a88cf2ef-6eb2-4bf6-9bf1-8bc6a5ec837c}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Flow &amp; Block">
+      <UniqueIdentifier>{529fd8c3-0735-402b-91e6-6a2a22e5c70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pin &amp; Level &amp; Timing">
+      <UniqueIdentifier>{cb81df01-61fb-4600-b612-a4d949720896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Datalogger">
+      <UniqueIdentifier>{aa1bb163-4070-4d25-99b8-39b4b992b935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Setup">
+      <UniqueIdentifier>{c07d8766-611b-4f14-9ca8-e93ad3d9230e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PATTERN">
+      <UniqueIdentifier>{97f55f00-e9e8-4a43-b349-aa2a1b334efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\User">
+      <UniqueIdentifier>{3b787b6c-f763-4043-ab3d-ee9adf2e9b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DLL">
+      <UniqueIdentifier>{69bbaa88-0859-4850-9e77-1fd7bb5c2fdd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="RevisionHistory.txt" />
+    <Text Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tblks_ac.cpp">
+      <Filter>Source Files\Flow &amp; Block</Filter>
+    </ClCompile>
+    <ClCompile Include="tblks_dc.cpp">
+      <Filter>Source Files\Flow &amp; Block</Filter>
+    </ClCompile>
+    <ClCompile Include="seq_and_bin.cpp">
+      <Filter>Source Files\Flow &amp; Block</Filter>
+    </ClCompile>
+    <ClCompile Include="timing.cpp">
+      <Filter>Source Files\Pin &amp; Level &amp; Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="voltage.cpp">
+      <Filter>Source Files\Pin &amp; Level &amp; Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="pin_scramble.cpp">
+      <Filter>Source Files\Pin &amp; Level &amp; Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="pin_lists.cpp">
+      <Filter>Source Files\Pin &amp; Level &amp; Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="pin_assignments.cpp">
+      <Filter>Source Files\Pin &amp; Level &amp; Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="fdatalog.cpp">
+      <Filter>Source Files\Datalogger</Filter>
+    </ClCompile>
+    <ClCompile Include="driver.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="host_begin.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="site_begin.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="tester.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Source Files\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="test_begin.cpp">
+      <Filter>Source Files\Flow &amp; Block</Filter>
+    </ClCompile>
+    <ClCompile Include="test_end.cpp">
+      <Filter>Source Files\Flow &amp; Block</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MultiDialog.aps" />
+    <None Include="APFP10.INI" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MultiDialog.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Debug\CL_Improve.lib" />
+  </ItemGroup>
+</Project>

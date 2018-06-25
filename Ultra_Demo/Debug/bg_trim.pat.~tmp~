@@ -1,0 +1,100 @@
+#line 1 "Debug\\bg_trim.pat"
+#line 1 "Debug\\bg_trim.pat"
+#line 1 "f:\\current work\\ultra_demo\\debug\\pat_macro.h"
+//pin scrambles
+
+
+
+
+
+
+
+
+
+//count
+
+//under subroutine layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//description layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+//encapsulation layer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 2 "Debug\\bg_trim.pat"
+
+PATTERN(p_BG)
+@{
+	amain(0x0);
+	dmain(0x0);
+@}
+//read rom version
+//s 88 00 5a+0x98=8'b1001,1000 ->8'b0011,0000=0x30
+//sr 89 01 01+0x16=8'b0001,0110 ->8'b0110,0000=0x60
+
+\n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7 \n udata 0x88 \n chips cs1pt \n mar gosub, SUB_GPIB5_send_A_Byte \n \n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7 \n udata 0x00 \n chips cs1pt \n mar gosub, SUB_GPIB5_send_A_Byte \n \n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7 \n udata 0x5a \n chips cs1pt \n mar gosub, SUB_GPIB5_send_A_Byte \n \n \n %pinfunc tset1, PS7,ADHIZ \n chips cs1pt \n datgen sudata, dbase, udatadr,basebase \n udata 0x30 \n mar gosub, SUB_read_CRC,read \n \n \n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7 \n udata 0x89 \n chips cs1pt \n mar gosub, SUB_GPIB5_send_A_Byte \n \n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7,adhiz \n udata 0x01 \n chips cs1pt \n mar gosub, SUB_GPIB5_read_A_Byte,read \n \n \n %datgen sudata, dmain, udatadr, mainmain \n pinfunc tset1, PS7,adhiz \n udata 0x01 \n chips cs1pt \n mar gosub, SUB_GPIB5_read_A_Byte,read \n \n \n %pinfunc tset1, PS7,ADHIZ \n chips cs1pt \n datgen sudata, dbase, udatadr,basebase \n udata 0x60 \n mar gosub, SUB_read_CRC,read \n \n
+%mar done
+pinfunc adhiz

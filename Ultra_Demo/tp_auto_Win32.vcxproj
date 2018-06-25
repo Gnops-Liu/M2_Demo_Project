@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{66C3348F-00F3-49AA-A1D7-3B254E654BA3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mintestprog</RootNamespace>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProjectName>Ultra_Demo</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir);$(LibraryPath)</LibraryPath>
+    <SourcePath>$(ProjectDir);$(SourcePath)</SourcePath>
+    <ReferencePath>$(ProjectDir);$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NO_WARN_MBCS_MFC_DEPRECATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);D:\Drivers\Head_File;D:\Drivers</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.h" "$(OutDir)"
+copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.dll" "$(OutDir)"
+copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.lib" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="COF_ToolBox.h" />
+    <ClInclude Include="Debug\CL_Improve.h" />
+    <ClInclude Include="Debug\pat_macro.h" />
+    <ClInclude Include="driver.h" />
+    <ClInclude Include="Eflash_Toolbox.h" />
+    <ClInclude Include="fdatalog.h" />
+    <ClInclude Include="pin_lists.h" />
+    <ClInclude Include="protos.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="tester.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="user_define.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme.txt" />
+    <Text Include="RevisionHistory.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="driver.cpp" />
+    <ClCompile Include="fdatalog.cpp" />
+    <ClCompile Include="host_begin.cpp" />
+    <ClCompile Include="pin_assignments.cpp" />
+    <ClCompile Include="pin_lists.cpp" />
+    <ClCompile Include="pin_scramble.cpp" />
+    <ClCompile Include="seq_and_bin.cpp" />
+    <ClCompile Include="site_begin.cpp" />
+    <ClCompile Include="tblks_ac.cpp" />
+    <ClCompile Include="tblks_dc.cpp" />
+    <ClCompile Include="tester.cpp" />
+    <ClCompile Include="test_begin.cpp" />
+    <ClCompile Include="test_end.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="timing.cpp" />
+    <ClCompile Include="voltage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="APFP10.INI" />
+    <None Include="MultiDialog.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MultiDialog.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Debug\CL_Improve.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
