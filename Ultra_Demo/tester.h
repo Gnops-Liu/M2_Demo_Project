@@ -19,7 +19,6 @@ using namespace std;
 #include "protos.h"
 #include "pin_lists.h"
 #include "fdatalog.h"
-#include "timer.h"
 #include "driver.h"
 #include "patcom_generated_includes.h"
 

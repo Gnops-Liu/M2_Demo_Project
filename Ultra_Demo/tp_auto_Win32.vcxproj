@@ -98,7 +98,6 @@ copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.lib" "$(OutDir)"<
     <ClInclude Include="protos.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="tester.h" />
-    <ClInclude Include="timer.h" />
     <ClInclude Include="user_define.h" />
   </ItemGroup>
   <ItemGroup>
@@ -119,7 +118,6 @@ copy "D:\Script\Engineering\M2\CL_Driver\CL_Improve\CL_Improve.lib" "$(OutDir)"<
     <ClCompile Include="tester.cpp" />
     <ClCompile Include="test_begin.cpp" />
     <ClCompile Include="test_end.cpp" />
-    <ClCompile Include="timer.cpp" />
     <ClCompile Include="timing.cpp" />
     <ClCompile Include="voltage.cpp" />
   </ItemGroup>
